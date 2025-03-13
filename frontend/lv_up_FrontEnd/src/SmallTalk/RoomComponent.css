@@ -1,0 +1,257 @@
+/* 방 전체 컨테이너 */
+.room-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #000;
+}
+
+/* 상단 바 (타이머 표시 영역) */
+.room-top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.room-timer-text {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* 중앙 메인 비디오 영역 */
+.main-video-container {
+  position: absolute;
+  top: 60px; /* 상단 바 높이만큼 아래 */
+  left: 0;
+  right: 0;
+  bottom: 100px; /* 하단 바 높이만큼 위 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.no-user {
+  color: #fff;
+  font-size: 18px;
+}
+
+/* 내 비디오: 오른쪽 하단 (작게) */
+.my-video-container {
+  position: absolute;
+  bottom: 120px; /* 하단 바 위 */
+  right: 20px;
+  width: 90px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.my-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 상대방 닉네임 / 소개 영역 */
+.user-info-bar {
+  position: absolute;
+  bottom: 130px;
+  padding-left: 20px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  color: #fff;
+}
+
+.user-info-bar h1 {
+  margin: 0 0 5px 0;
+}
+
+.user-info-bar p {
+  margin: 0;
+}
+
+/* 하단 바 (버튼 3개) */
+.bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* 공통 버튼 스타일 */
+.bottom-button {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 298;
+}
+
+/* 아이콘 버튼 공통 스타일 */
+.bottom-button.icon-button {
+  background-color: #ccc;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.2s;
+}
+
+.bottom-button.icon-button img {
+  width: 32px;
+  height: 32px;
+  /* 처음엔 색 반전 */
+  filter: invert(100%);
+}
+
+/* 기본 상태에서 호버 시 */
+.bottom-button.icon-button:hover {
+  background-color: #bbb;
+}
+
+/* 활성(active) 상태: 신고 중, 마이크 OFF, 스크립트 ON 등 */
+.bottom-button.icon-button.active {
+  background-color: #fa400d; /* 빨간색 배경 */
+}
+
+/* .bottom-button.icon-button.active img {
+  filter: none;
+} */
+
+/* 버튼 비활성화(예: 스크립트 열렸을 때) 상태 */
+.bottom-button.icon-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* -------- 오버레이 (팝업) 공통 -------- */
+/* 오버레이 배경 (스크립트 팝업 등에 사용) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 297;
+  pointer-events: none; /* 배경 클릭 무시 */
+}
+
+/* overlay 내부에 있는 팝업만 클릭 가능하게 */
+.overlay > * {
+  pointer-events: auto;
+}
+
+/* -------- 스크립트 팝업 스타일 -------- */
+.script-popup-overlay {
+  /* 필요하다면 배경 색상이나 추가 효과 지정 */
+}
+
+.script-popup {
+  position: absolute;
+  top: 80px; /* 상단 바 바로 아래 */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  z-index: 297;
+}
+
+/* ----------- end pop css (상대방 이탈 팝업) ----------- */
+
+/* 팝업 배경 */
+.end-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4); /* 배경 반투명 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9000; /* 다른 요소 위에 표시 */
+}
+
+/* 팝업 컨테이너 */
+.end-popup-content {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  max-width: 400px;
+  width: 80%;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+  /* 등장 애니메이션 */
+  animation: popupFadeIn 0.3s ease-out;
+}
+
+/* 팝업 타이틀 */
+.end-chat-title {
+  margin: 0 0 1rem 0;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+/* 팝업 설명(사유) */
+.end-chat-reason {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* 팝업 버튼 */
+.end-chat-button {
+  background-color: #fa400d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.end-chat-button:hover {
+  background-color: #e33603;
+}
+
+/* 팝업 등장시 애니메이션 */
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

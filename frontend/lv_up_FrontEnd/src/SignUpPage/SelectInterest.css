@@ -1,0 +1,76 @@
+.interest_explain {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  font-size: 14px;
+  max-width: 80%;
+}
+
+.select_interest_container {
+  font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+.interest_button {
+  position: relative;
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+  border-radius: 16px;
+  background-color: #fff;
+  min-width: 62px;
+  height: 34px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0 12px;
+  font-size: 14px;
+  color: #333;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.interest_button:hover {
+  background-color: #ffe4dd;
+  border-color: #fa400d;
+}
+
+.interest_button.selected {
+  background-color: #ffe4dd;
+  color: #fa400d;
+  border-color: #fa400d;
+}
+
+.selection_count {
+  margin: 30px 5%;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
+
+.select_bar {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #000;
+}

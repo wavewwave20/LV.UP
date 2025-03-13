@@ -1,0 +1,56 @@
+/* SelectAvatar.css */
+.select-avatar-container {
+  text-align: center;
+}
+
+.selected-avatar {
+  border: 2px solid #fa400d;
+  /* 필요하다면 추가로 스타일을 줄 수 있습니다 */
+  border-radius: 50px;
+  /* 혹은 box-sizing 등을 조정해서 이미지 크기에 맞추거나 할 수 있음 */
+}
+/* 아바타들을 가로로 나열하고 간격을 100px 주고 싶을 때 */
+.avatar-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin-top: 50px;
+  width: 100%;
+  max-width: 600px;
+  flex-wrap: wrap;
+}
+
+/* 아바타 이미지 기본 스타일 */
+.avatar-image {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  /* 원하는 기본 스타일 더 추가 가능 */
+}
+
+/* 마우스 호버 효과 */
+.avatar-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 선택된 아바타 */
+.avatar-image.selected {
+  border: 5px solid #fa400d;
+  border-radius: 18px;
+}
+
+.avatar-select-bar {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.avatar-explain {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  font-size: 14px;
+  font-weight: 700;
+}

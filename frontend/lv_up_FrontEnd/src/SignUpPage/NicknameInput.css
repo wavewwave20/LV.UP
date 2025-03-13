@@ -1,0 +1,146 @@
+.nickname_input_container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* 입력 필드 섹션 */
+.input_section {
+  position: relative;
+  margin: 80px auto;
+}
+
+
+.nickname_field {
+  flex: 1; /* 입력 필드가 가변적으로 늘어나도록 설정 */
+  padding: 15px;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.nickname_field:focus {
+  border-bottom-color: #fa400d;
+}
+
+.nickname_field::placeholder {
+  color: gray;
+  opacity: 0.8;
+  text-align: left;
+}
+
+.check_button {
+  margin-left: 10px;
+  padding: 12px;
+  border: none;
+  background-color: #fa400d;
+  color: white;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.check_button:hover {
+  background-color: #e5370c;
+}
+
+/* 피드백 메시지 섹션 */
+.feedback_section {
+  margin-top: -60px;
+  text-align: left;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feedback_message {
+  margin: 0;
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+.feedback_message.success {
+  color: green;
+}
+
+.feedback_message.error {
+  color: red;
+}
+
+/* 태블릿 크기 */
+@media screen and (max-width: 768px) {
+  .input_line {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .nickname_field {
+    width: calc(100% - 100px);
+    font-size: 16px;
+  }
+
+  .check_button {
+    width: 85px;
+    height: 35px;
+    right: -10px;
+  }
+
+  .feedback_section {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+/* 모바일 크기 */
+@media screen and (max-width: 480px) {
+  .input_section {
+    margin: 60px auto;
+  }
+
+  .nickname_field {
+    font-size: 15px;
+  }
+
+  .interest_description {
+    font-size: 11px;
+  }
+
+  .warning_bubble {
+    font-size: 12px;
+  }
+
+  .check_button {
+    width: 80px;
+    height: 40px;
+    font-size: 13px;
+  }
+
+  .feedback_section {
+    margin-top: -40px;
+  }
+
+  .feedback_message {
+    font-size: 13px;
+  }
+}
+
+/* 작은 모바일 크기 */
+@media screen and (max-width: 320px) {
+  .input_section {
+    margin: 50px auto;
+  }
+
+  .nickname_field {
+    font-size: 14px;
+  }
+
+  .check_button {
+    width: 70px;
+    height: 30px;
+    font-size: 12px;
+    top: -35px;
+  }
+}

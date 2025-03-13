@@ -1,0 +1,136 @@
+.customize_container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #ffffff;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.customize_container h1 {
+  font-size: 28px;
+  color: #000;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+  padding: 0 20px;
+}
+
+.customize_nickname_title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #000;
+}
+
+.warning_bubble {
+  display: inline-block;
+  position: relative;
+  background-color: #363693;
+  color: black;
+  padding: 12px 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  font-size: 15px;
+  font-weight: 100;
+  text-align: center;
+  margin: 0 auto 30px;
+}
+
+.warning_bubble::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #e6e6f1 transparent transparent transparent;
+}
+
+.interest_button {
+  position: relative;
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+  border-radius: 16px;
+  background-color: #fff;
+  min-width: 62px;
+  height: 34px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0 12px;
+  font-size: 14px;
+  color: #333;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.interest_button:hover {
+  background-color: #f8f8f8;
+}
+
+.interest_button.selected {
+  background-color: #FFE4DD;
+  color: #FA400D;
+}
+
+.next_button {
+  width: 90%;
+  max-width: 350px;
+  height: 60px;
+  border-radius: 25px;
+  background-color: #fa400d;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 150px;
+  transition: background-color 0.3s;
+}
+
+.next_button:hover {
+  background-color: #e5370c;
+}
+
+/* 태블릿 크기 */
+@media screen and (max-width: 768px) {
+  .customize_container h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .next_button {
+    margin-top: 120px;
+    height: 55px;
+  }
+}
+
+/* 모바일 크기 */
+@media screen and (max-width: 480px) {
+  .customize_container {
+    padding: 15px;
+  }
+
+  .customize_container h1 {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  .speech_bubble {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .next_button {
+    height: 50px;
+    margin-top: 100px;
+    font-size: 15px;
+  }
+}

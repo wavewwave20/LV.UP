@@ -1,0 +1,158 @@
+.ai_history_container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #fff;
+  min-height: 100vh;
+  padding: 1.25rem;
+  box-sizing: border-box;
+}
+
+.back_button {
+  position: absolute;
+  top: 2rem;
+  left: 1.2rem;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.back_button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ai_history_title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  text-align: center;
+  color: #202020;
+}
+
+.ai_history_line {
+  position: relative;
+  width: 90%;
+  max-width: 562px;
+  margin: 2.375rem auto 0;
+  border-top: 1px solid #cacaca;
+}
+
+
+.aihistory_date_title {
+  font-size: 1.25rem;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+  color: rgba(0, 0, 0, 0.7);
+  text-align: left;
+  margin: 1.5rem 0;
+  margin-left: 1.25rem;
+}
+
+.chat_record_card {
+  position: relative;
+  margin: 0 auto 0.8rem;
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  background-color: #fff;
+  border: 1px solid #dadada;
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 519px;
+  min-height: 3.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chat_scenario {
+  font-size: 1.25rem;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #000;
+}
+
+.chat_time {
+  font-size: 1.25rem;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #202020;
+}
+
+/* 태블릿 디바이스 (768px 이하) */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .chat_scenario,
+  .chat_time {
+    font-size: 1.1rem;
+  }
+
+  .aihistory_date_title {
+    font-size: 1.1rem;
+  }
+}
+
+/* 모바일 디바이스 (480px 이하) */
+@media screen and (max-width: 480px) {
+  .ai_history_container {
+    padding: 1rem;
+  }
+
+  .back_button {
+    top: 1.5rem;
+    left: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .title {
+    top: 1.8rem;
+    font-size: 1.1rem;
+  }
+
+  .chat_record_card {
+    padding: 1rem;
+    min-height: 3rem;
+  }
+
+  .chat_scenario,
+  .chat_time {
+    font-size: 1rem;
+  }
+
+  .aihistory_date_title {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+}
+
+/* 작은 모바일 디바이스 (320px 이하) */
+@media screen and (max-width: 320px) {
+  .ai_history_container {
+    padding: 0.8rem;
+  }
+
+  .chat_record_card {
+    padding: 0.8rem;
+  }
+
+  .chat_scenario,
+  .chat_time {
+    font-size: 0.9rem;
+  }
+
+  .aihistory_date_title {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,43 @@
+# IntelliJ IDEA 관련
+.idea/
+*.iml
+*.iws
+out/
+
+# OS 관련
+.DS_Store
+Thumbs.db
+
+# Gradle 관련
+.gradle/
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Maven 관련
+.mvn/
+!**/pom.xml
+
+# Spring Boot 관련
+logs/
+*.log
+*.war
+*.jar
+
+# 환경 변수 파일
+.env
+application.properties
+application.yml
+
+# 로컬 데이터베이스 파일
+*.h2.db
+*.mv.db
+*.db
+
+# Node.js (React 프론트엔드 포함) 관련
+node_modules/
+yarn.lock
+package-lock.json
+
+# Docker 관련
+.dockerignore
+docker-compose.override.yml

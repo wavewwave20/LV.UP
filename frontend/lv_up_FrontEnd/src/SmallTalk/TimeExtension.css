@@ -1,0 +1,180 @@
+/* ========== TimeExtension.css ========== */
+
+/* 전체 컨테이너: 화면 중앙 정렬, 상대적 위치 지정 */
+.time-extension-container {
+  width: 100%;
+  max-width: 600px; /* 최대 너비 설정 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+  z-index: 299;
+}
+
+/* 남은 시간 스타일 */
+.time-remaining {
+  /* margin-top: 100px; */
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fa400d;
+  margin-bottom: 20px;
+}
+
+/* 알림 영역 스타일 */
+.notice-end {
+  margin-bottom: 20px;
+}
+
+.time-bold-notice {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.time-small-notice {
+  font-size: 0.9rem;
+  color: #fa400d;
+}
+
+/* 코인 보유 섹션 */
+.remain-coins {
+  margin-bottom: 20px;
+}
+
+.remained-coin-text {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* 코인 박스: 내부는 세로 중앙 정렬, 그림자 효과 */
+.remained-coin-box {
+  width: 96px;
+  height: 64px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.remained-coin-box img {
+  width: 32px;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+/* 버튼 영역: 수직으로 배치 */
+.select-choose-extend {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center; /* 가운데 정렬 */
+}
+
+/* YES/NO 버튼 공통 스타일 (너비와 높이를 동일하게) */
+.positive-extend,
+.negative-extend {
+  width: 300px;
+  height: 60px; /* 버튼 높이를 고정 */
+  border-radius: 45px;
+  display: flex;
+  flex-direction: column; /* 내부를 세로로 배치 */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  /* 모바일에서 폰트 크기가 줄어도 더 줄바꿈되지 않도록 처리 */
+  white-space: nowrap;
+  /* 필요시 text-overflow 추가 가능: overflow: hidden; text-overflow: ellipsis; */
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* YES 버튼 */
+.positive-extend {
+  background-color: #fa400d;
+  color: #fff;
+}
+
+/* NO 버튼 */
+.negative-extend {
+  background-color: rgba(250, 64, 13, 0.2);
+  color: #000;
+}
+
+/* YES 버튼 내부 첫 줄 (코인 + 숫자) */
+.positive-extend .line1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px; /* 이미지와 숫자 간격 */
+}
+
+/* YES 버튼 내부 텍스트 (두 번째 줄) */
+.positive-extend p {
+  margin: 0; /* 기본 p태그 margin 제거 */
+}
+
+/* NO 버튼 내부 p태그 margin 제거 (가운데 정렬 유지) */
+.negative-extend p {
+  margin: 0;
+}
+
+/* 반응형 디자인: 화면 너비 600px 이하 */
+@media (max-width: 600px) {
+  .time-extension-container {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .time-remaining {
+    margin-top: 70px;
+    font-size: 1.5rem;
+  }
+
+  .time-bold-notice {
+    font-size: 1.2rem;
+  }
+
+  .remained-coin-box {
+    width: 80px;
+    height: 54px;
+  }
+
+  .remained-coin-box img {
+    width: 24px;
+  }
+
+  .positive-extend,
+  .negative-extend {
+    /* 높이는 고정 유지, 폰트 크기는 약간 줄일 수 있음 */
+    height: 60px;
+    font-size: 0.95rem;
+  }
+}
+
+/* 추가 반응형: 화면 너비 400px 이하 */
+@media (max-width: 400px) {
+  .time-remaining {
+    font-size: 1.2rem;
+  }
+  .time-bold-notice {
+    font-size: 1rem;
+  }
+  .time-small-notice {
+    font-size: 0.8rem;
+  }
+
+  .positive-extend,
+  .negative-extend {
+    font-size: 0.9rem;
+    height: 60px; /* 계속 고정 */
+  }
+}

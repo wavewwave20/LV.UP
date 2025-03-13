@@ -1,0 +1,172 @@
+/* Variables */
+:root {
+  --primary-color: #fa400d;
+  --primary-light: rgba(250, 64, 13, 0.5);
+  --gray-bg: rgba(197, 197, 197, 0.3);
+  --gray-text: rgba(197, 197, 197, 0.8);
+  --dark-text: #333;
+  --hover-color: #ff6347;
+  /* 최대 너비를 설정해두면, 큰 화면에서는 내용이 너무 넓어지지 않도록 할 수 있어요 */
+  --container-width: min(90%, 800px);
+}
+
+
+/* 전체 컨테이너: 중앙 정렬 */
+.loading-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* 수직 중앙 정렬 */
+  width: 100%;
+  max-width: 1200px; /* 더 커지지 않도록 제한할 수도 있습니다 */
+  margin: 0 auto;     /* 좌우 중앙 정렬 */
+  min-height: 100vh;  /* 화면 전체 높이를 채울 정도로 */
+  position: relative; 
+  padding: clamp(10px, 3vw, 20px);
+}
+
+.loading-title {
+  font-weight: bold;
+  font-size: clamp(12px, 1.4vw, 14px);
+  color: var(--primary-color);
+  margin-top: clamp(0px, 10vw, 10px);
+  text-align: center; /* 타이틀은 중앙 정렬 */
+  line-height: 40px;
+}
+
+/* 뒤로 가기 버튼 */
+.loading-close-button {
+  position: absolute;
+  top: clamp(10px, 3vw, 20px);
+  left: clamp(10px, 3vw, 20px);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 10;
+}
+
+/* 규칙 섹션 */
+.rules {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(5px, 1.5vw, 10px);
+  width: var(--container-width);
+  margin: clamp(10px, 3vw, 20px) auto; /* 가로 중앙 정렬 */
+  margin-left: calc(65% - var(--container-width) / 2); /* 가로 중앙 정렬 */
+  align-items: flex-start;             /* 내부 아이템은 왼쪽 정렬 */
+}
+
+.rule-item {
+  display: flex;
+  align-items: center;
+  gap: clamp(15px, 4vw, 30px);
+  margin-bottom: clamp(15px, 4vw, 30px);
+  font-size: clamp(14px, 1.6vw, 16px);
+  color: var(--dark-text);
+  font-weight: bold;
+  text-align: left;
+}
+
+.rule-item img {
+  width: clamp(40px, 8vw, 60px);
+  height: auto;
+}
+
+/* 규칙 동의 섹션 */
+.rule-agreement {
+  background-color: var(--gray-bg);
+  padding: clamp(10px, 3vw, 20px);
+  border-radius: 10px;
+  margin: clamp(10px, 3vw, 20px) auto;
+  width: var(--container-width);
+  text-align: center; /* 전체 텍스트를 중앙 정렬 */
+}
+
+.agreement-content {
+  line-height: 1.6;  /* 문장 간 간격을 넉넉히 */
+  margin-bottom: 20px;
+  white-space: pre-line; 
+  /* 텍스트에 '\n'(줄바꿈)이 있는 경우 그대로 표시 (여러 줄로 표현 가능) */
+}
+
+.check-agreement {
+  display: flex;
+  align-items: center;
+  gap: clamp(5px, 1.5vw, 10px);
+  cursor: pointer;
+  justify-content: center; /* 체크박스와 글씨를 가로 방향 중앙 정렬 */
+}
+
+.check-agreement:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.check-agreement img {
+  width: 24px;
+  height: 24px;
+}
+
+.checking-agreement {
+  margin-left: clamp(5px, 1.5vw, 10px);
+}
+
+/* 매칭 버튼 */
+.matching-button {
+  background-color: var(--primary-light);
+  color: white;
+  font-size: clamp(14px, 1.6vw, 16px);
+  padding: clamp(8px, 2vw, 10px) clamp(15px, 3vw, 20px);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  height: clamp(50px, 8vw, 60px);
+  min-width: 200px;
+  transition: background-color 0.3s ease-in-out;
+  margin: 0 auto; /* 버튼 자체가 중앙에 오도록 */
+  display: block;
+}
+
+.matching-button.active {
+  background-color: var(--primary-color);
+}
+
+.matching-button:hover {
+  background-color: var(--hover-color);
+}
+
+.matching-button.matching {
+  background-color: white;
+}
+
+.matching-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.notice-title {
+  cursor: pointer;
+}
+/* 반응형 (모바일) */
+@media (max-width: 480px) {
+  :root {
+    --container-width: 95%;
+  }
+  /* 모바일에서 글자나 레이아웃이 너무 빽빽하지 않도록 조정 */
+  .agreement-content {
+  }
+
+  .rule-item {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+/* 큰 화면에서 컨테이너 최대 폭 지정 */
+@media (min-width: 1200px) {
+  .loading-page {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

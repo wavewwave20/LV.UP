@@ -1,0 +1,149 @@
+/* 기존 스타일 유지 */
+.red-text {
+  color: #fa400d;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.gray-text {
+  color: gray;
+  font-size: 14px;
+  margin: 5px 0 0;
+  line-height: 1.5;
+}
+
+.correct-expression {
+  display: flex;
+  align-items: center;
+  color: #6cb6e4;
+  font-weight: bold;
+}
+
+.circle {
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+  object-fit: cover;
+}
+
+.improvement-expression {
+  display: flex;
+  color: #fa400d;
+  font-weight: bold;
+  align-items: center;
+}
+
+.triangle {
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+  object-fit: cover;
+}
+
+.advice {
+  color: #fa400d;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.advice-message {
+  font-size: 14px;
+}
+
+.chat-box {
+  max-width: 60%;
+  margin-bottom: 20px;
+}
+
+.chat-box2 {
+  max-width: 60%;
+  margin-bottom: 20px;
+}
+
+/* 추가된 평가 관련 스타일 */
+.evaluation-block {
+  margin-top: 10px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.score-indicator {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.evaluation-icon {
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+/* 평가 텍스트 색상 추가 */
+.evaluation-text {
+  margin-left: 5px;
+}
+
+.evaluation-text.score-danger {
+  color: #FF0000;
+}
+
+.evaluation-text.score-warning {
+  color: #FFA500;
+}
+
+.evaluation-text.score-good {
+  color: #008000;
+}
+
+.evaluation-text.score-excellent {
+  color: #0000FF;
+}
+
+.my-answer-label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.overall-comment {
+  font-size: 14px;
+  color: #333;
+}
+
+/* 상세 체점 내역 토글 스타일 */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 8px;
+  border-top: 1px dashed #ccc;
+  padding-top: 8px;
+}
+
+.toggle-arrow {
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+.toggle-text {
+  font-size: 14px;
+  color: #007bff;
+}
+
+.detailed-scores {
+  margin-top: 8px;
+  padding: 8px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+.detailed-score-item {
+  margin-bottom: 4px;
+  font-size: 13px;
+}

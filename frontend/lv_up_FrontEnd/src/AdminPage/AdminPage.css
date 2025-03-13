@@ -1,0 +1,89 @@
+.admin_container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  height: 100vh;
+  background-color: #fffbee;
+}
+
+/* 헤더 */
+.admin_header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #ffe6d8;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid #fa400d;
+}
+
+.admin_logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fa400d;
+  margin-right: 2rem;
+}
+
+.admin_nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.tab_button {
+  background-color: transparent;
+  border: 2px solid #fa400d;
+  color: #fa400d;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab_button.active {
+  background-color: #fa400d;
+  color: #fff;
+}
+
+/* 메인 영역 */
+.admin_body {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+/* 테이블 */
+.posts_table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: white;
+}
+
+.posts_table th,
+.posts_table td {
+  border: 1px solid #fa400d;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.posts_table thead {
+  background-color: #ffe6d8;
+}
+
+.posts_table tbody tr:hover {
+  background-color: #fff2ea;
+}
+
+/* 검색 영역 */
+.search_container {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.search_container input,
+.search_container select {
+  padding: 0.3rem;
+  border: 1px solid #fa400d;
+  border-radius: 4px;
+}

@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Pretendard Variable";
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden; /* 가로 스크롤 방지 */
+}

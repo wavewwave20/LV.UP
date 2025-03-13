@@ -1,0 +1,131 @@
+/* 팝업 전체 화면(배경) */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* 화면 맨 위로 */
+}
+
+/* 팝업 내용 박스 */
+.popup-content {
+  position: relative; /* 닫기 버튼을 배치하기 위해 relative 사용 */
+  background-color: #fff;
+  padding: 40px 20px 20px 20px; /* 위쪽 여백 넉넉히 */
+  border-radius: 10px;
+  width: 400px; /* 팝업 너비 조절 */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* 팝업 제목 (시나리오 선택) 여백 조절 */
+.popup-content h2 {
+  margin-bottom: 20px;
+}
+
+/* 3. 닫기(X) 버튼: 최상단 왼쪽 고정 */
+.close-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* 2. 시나리오들을 배치할 컨테이너: 2개씩 3줄 => 총 6개 */
+.scenarios-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px; /* 버튼 사이 간격 */
+  margin-bottom: 20px;
+}
+
+/* 시나리오 버튼 기본 스타일 */
+.scenario-button {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 0.9rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #f7f7f7;
+  transition: background-color 0.3s;
+}
+
+/* 시나리오 버튼 :hover 효과 (선택 전) */
+.scenario-button:hover {
+  background-color: #eee;
+}
+
+/* 시나리오 버튼 활성화(클릭) 상태 */
+.scenario-button.active {
+  background-color: #fa400d; /* 활성화 색상 */
+  color: #fff; /* 텍스트 색상 */
+  border-color: #fa400d; /* 테두리 색상 */
+}
+
+/* 4. 시작하기 버튼 (기존 닫기 버튼 위치) */
+.start-button {
+  background-color: #fa400d;
+  border: none;
+  border-radius: 45px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s;
+  width: 300px;
+  padding-top: 5px;
+}
+
+.start-button:hover {
+  background-color: #ffa27a;
+}
+
+.start-chat {
+  margin: 0px;
+}
+
+.scenario-ticket {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px; /* 아이콘과 텍스트 사이 간격 */
+  /* 원하는 배경색이 있다면 지정 */
+  background-color: #918f9c;
+  border-radius: 45px;
+  width: 100px;
+  opacity: 0.6;
+}
+
+.ticket-section {
+  color: white;
+  font-weight: 1000;
+  margin: 8px;
+}
+
+.ticket-img {
+  width: 40px; /* 아이콘 크기 */
+  height: 40px;
+}
+
+.scenario-dropdown,
+.personality-dropdown {
+  margin-bottom: 15px; /* 선택창 간격 */
+  padding: 10px; /* 내부 여백 */
+  width: 200px;
+}
+
+.scenario-description,
+.personality-description {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 20px;
+}

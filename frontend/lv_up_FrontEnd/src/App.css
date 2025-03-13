@@ -1,0 +1,19 @@
+.app-container {
+  width: 100%;
+  max-width: 600px; /* 데스크톱에서의 최대 너비 */
+  min-width: 320px; /* 모바일 최소 너비 */
+  margin: 0 auto;
+  padding: 0 px; /* 좌우 여백 추가 */
+  box-sizing: border-box; /* 패딩을 너비에 포함 */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Pretendard Variable";
+}
+
+/* 모바일 화면을 위한 미디어 쿼리 */
+@media screen and (max-width: 480px) {
+  .app-container {
+    padding: 0 px; /* 모바일에서는 여백을 좀 더 줄임 */
+  }
+}

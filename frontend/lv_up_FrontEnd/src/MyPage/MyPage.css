@@ -1,0 +1,249 @@
+/* 뒤로가기 버튼 */
+.back_button {
+  position: absolute;
+  top: clamp(25px, 5vh, 33px);
+  left: 12px;
+  width: 32px;
+  height: 32px;
+}
+
+/* 마이페이지 컨테이너 */
+.my_page_container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 100px; /* 네비바 높이만큼 여백 추가 */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+/* 프로필 섹션 */
+.profile_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.mypage_profile_image {
+  width: clamp(120px, 30vw, 163px);
+  height: clamp(120px, 30vw, 163px);
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* 유저 정보 */
+.user_info {
+  color: #000;
+  font-size: clamp(16px, 4vw, 20px);
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+  text-align: center;
+}
+
+/* 메뉴 섹션 */
+.menu_section {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 5vw, 32px);
+  padding: clamp(20px, 5vw, 30px);
+}
+
+.menu_category-category {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.introduction-title {
+  color: #918f9c;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.15px;
+}
+
+/* 자기소개 컨테이너 */
+.introduction-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 8px 24px 0px rgba(149, 157, 165, 0.2);
+  padding: 16px;
+}
+
+.introduction-content {
+  flex-grow: 1;
+  color: #918f9c;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}
+
+/* 글씨 카테고리 */
+.writing_categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.writing_categories span {
+  display: block;
+  padding: 8px 25px;
+  border-radius: 16px;
+  background-color: white;
+  text-align: center;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.writing_categories span:hover {
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* 메뉴 아이템 */
+.menu_items {
+  padding-left: 10%;
+  color: #202020;
+  font-size: clamp(16px, 4vw, 20px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+}
+
+.menu_items_interest {
+  color: #202020;
+  font-size: clamp(16px, 4vw, 20px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+}
+
+.menu_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0;
+}
+
+/* 버전 정보 및 회원탈퇴 */
+.version_info {
+  margin-top: 40px;
+  color: #918f9c;
+  font-size: 14px;
+  text-align: left;
+  margin-left: 30px;
+}
+
+.withdraw {
+  color: #b8b8b8;
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
+
+/* 아이콘 관련 스타일 */
+.next_icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.next_icon_small {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+  object-fit: contain;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.introduction-modify-image {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* 카테고리 타이틀 부분 수정 */
+.category_title {
+  display: flex;
+  align-items: center;
+  color: #918f9c;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.15px;
+}
+
+/* 모바일 화면 */
+@media screen and (max-width: 480px) {
+  .my_page_container {
+    padding: 15px;
+    padding-bottom: 90px;
+  }
+
+  .menu_section {
+    padding: 15px;
+  }
+
+  .writing_categories {
+    gap: 15px;
+  }
+
+  .writing_categories span {
+    font-size: 16px;
+  }
+}
+
+/* 매우 작은 화면 */
+@media screen and (max-width: 320px) {
+  .my_page_container {
+    padding: 10px;
+    padding-bottom: 80px;
+  }
+
+  .menu_section {
+    padding: 10px;
+  }
+}
+
+.loading-overlay {
+  position: fixed; /* 전체 뷰포트를 덮음 */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white; /* 반투명 배경 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* 최상단에 위치시키기 */
+}
+
+.loading-gif {
+  width: 40px;
+  height: 40px; /* 필요에 따라 조절 */
+  margin-bottom: 20px;
+  /* lvup.gif 크기에 맞춰 적절히 조절 */
+}

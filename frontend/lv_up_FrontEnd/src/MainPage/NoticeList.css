@@ -1,0 +1,70 @@
+.announcement {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffdad0; /* 기존 배경색 유지 */
+  min-height: 20px; /* 최소 높이 설정 */
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden; /* 넘치는 내용 숨김 */
+}
+
+.announcement h2 {
+  margin-bottom: 10px;
+  color: #d35400;
+  font-size: 18px;
+}
+
+.announcement-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 100px; /* 고정 높이 */
+  overflow: hidden; /* 내용이 넘칠 경우 숨김 */
+}
+
+.announcement-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInDown 0.8s ease forwards;
+}
+
+/* 공지사항 내려오는 애니메이션 */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 공지사항 태그 스타일 */
+.notice-tag {
+  font-weight: bold;
+  color: #fa400d;
+}
+
+/* 공지사항 제목 스타일 */
+.notice-title {
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+/* 공지사항 날짜 스타일 */
+.notice-date {
+  color: gray;
+  font-size: 12px;
+  margin-top: 2px;
+}

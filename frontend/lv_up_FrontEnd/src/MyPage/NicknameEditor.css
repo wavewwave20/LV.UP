@@ -1,0 +1,129 @@
+.nickname_editor_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+.nickname_title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  text-align: center;
+  color: #000;
+}
+
+.warning_bubble {
+  background-color: #f5f5f5;
+  padding: 15px 20px;
+  border-radius: 20px;
+  margin-bottom: 60px;
+  position: relative;
+  max-width: 80%;
+  font-weight: 700;
+}
+
+.warning_bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #f5f5f5;
+}
+.input_container {
+  width: 100%;
+  max-width: 400px;
+  display: flex; /* 가로 정렬 */
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.nickname_input {
+  flex: 1; /* 입력 필드가 가변적으로 늘어나도록 설정 */
+  padding: 15px;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.nickname_input:focus {
+  border-bottom-color: #fa400d;
+}
+
+.nickname_input::placeholder {
+  color: #999;
+}
+
+.nickname-check-button {
+  margin-left: 10px; /* 입력 필드와 간격 */
+  padding: 12px 15px;
+  border: none;
+  background-color: #fa400d;
+  color: white;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+.nickname-check-button:hover {
+  background-color: #d83609;
+}
+
+.char_count {
+  position: absolute;
+  right: 10px;
+  bottom: -25px;
+  color: #999;
+  font-size: 14px;
+}
+
+.confirm_button {
+  background-color: #ddd;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 0;
+  width: 80%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  max-width: 400px;
+}
+
+.confirm_button.active {
+  background-color: #fa400d;
+}
+
+.loading-overlay {
+  position: fixed; /* 전체 뷰포트를 덮음 */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white; /* 반투명 배경 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* 최상단에 위치시키기 */
+}
+
+.loading-gif {
+  width: 40px;
+  height: 40px; /* 필요에 따라 조절 */
+  margin-bottom: 20px;
+  /* lvup.gif 크기에 맞춰 적절히 조절 */
+}

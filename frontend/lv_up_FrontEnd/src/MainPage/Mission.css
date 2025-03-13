@@ -1,0 +1,92 @@
+.mission-container {
+  width: 100%;
+  max-width: 500px;
+  margin: clamp(30px, 8vh, 10px) auto clamp(20px, 5vh, 10px) auto;
+  box-sizing: border-box;
+}
+
+.today-mission {
+  font-weight: bold;
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  margin-bottom: clamp(15px, 4vw, 20px);
+  text-align: start;
+  padding-left: 10px;
+}
+
+.mission-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.mission-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: clamp(8px, 2vw, 10px) clamp(15px, 4vw, 20px);
+  border: 1px solid #dadada;
+  border-radius: 15px;
+  position: relative;
+  background: white;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.mission-item.connected::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: clamp(40px, 10vw, 50px);
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background-color: #dadada;
+}
+
+.mission-image {
+  width: clamp(30px, 8vw, 40px);
+  height: clamp(30px, 8vw, 40px);
+  flex-shrink: 0;
+}
+
+.mission-text {
+  margin: 0;
+  flex-grow: 1;
+  padding-right: clamp(15px, 4vw, 20px);
+  font-size: clamp(14px, 3.5vw, 16px);
+}
+
+/* 모바일 화면 */
+@media screen and (max-width: 480px) {
+  .mission-container {
+    padding: 0 15px;
+  }
+
+  .mission-item {
+    margin-bottom: 25px;
+  }
+
+  .mission-item.connected::after {
+    height: 15px;
+    bottom: -20px;
+  }
+}
+
+/* 매우 작은 화면 */
+@media screen and (max-width: 320px) {
+  .mission-container {
+    padding: 0 10px;
+  }
+
+  .mission-item {
+    margin-bottom: 20px;
+  }
+
+  .today-mission {
+    padding-left: 5px;
+  }
+}

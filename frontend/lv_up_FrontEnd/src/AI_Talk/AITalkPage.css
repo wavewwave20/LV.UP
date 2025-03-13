@@ -1,0 +1,548 @@
+@font-face {
+  font-family: "DNFBitBitv2";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf") format("opentype");
+}
+
+/* 전체 레이아웃 */
+/* 상단 영역: 화면에 고정 */
+/* 상단 영역: 화면에 고정 */
+.top-area {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 600px; /* 최대 너비 유지 */
+  background-color: white;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px; /* 작은 화면에서 패딩 줄이기 */
+  box-sizing: border-box;
+}
+
+/* 첫 번째 줄: 왼쪽에 Back 버튼, 중앙에 Title */
+.row1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+<<<<<<< HEAD
+  position: relative; /* 버튼을 자유롭게 배치하기 위해 */
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 40px;
+=======
+  align-items: center;
+>>>>>>> develop
+}
+
+/* Back 버튼 */
+.ai-back-button {
+  position: absolute;
+  left: 10px; /* 작은 화면에서 간격 유지 */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* 중앙 타이틀 */
+.top-title {
+<<<<<<< HEAD
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+=======
+  font-size: clamp(18px, 4vw, 24px);
+  font-weight: bold;
+  text-align: center;
+  color: #202020;
+  margin: 0;
+}
+
+/* 두 번째 줄: 오른쪽에 Life-area */
+.row2 {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+/* LIFE 표시 영역 */
+.Life-area {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "DNFBitBitv2", Arial, sans-serif;
+}
+
+/* 하트 아이콘 */
+.Life {
+  width: 25px;
+  height: 25px;
+}
+
+.row3 {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.explain-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: -60px;
+  gap: 10px;
+}
+
+.explain-text {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.tooltip-button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ddd;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* 툴팁 스타일 */
+.tooltip {
+  position: absolute;
+  transform: translate(-50%);
+  width: 200px;
+  padding: 10px;
+  background-color: #000c;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 8px;
+  text-align: center;
+  white-space: normal;
+  box-shadow: 0 2px 5px #0003;
+  top: 30px;
+  left: 10px;
+}
+
+/* 말풍선 꼬리 */
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+}
+
+/* 구분선 */
+.aichat_line {
+  width: 90%;
+  max-width: 562px;
+  margin: 120px auto 10px; /* 작은 화면에서 더 조정 */
+  border-top: 1px solid #cacaca;
+>>>>>>> develop
+}
+
+/* 채팅 영역 스타일 */
+.chat-area {
+<<<<<<< HEAD
+  min-width: 600px;
+  padding: 15px;
+=======
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 70px;
+>>>>>>> develop
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* 대화 간 간격 */
+  padding: 0 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* 사용자 메시지 (오른쪽 정렬) */
+.chat-box2 {
+  align-self: flex-end;
+  max-width: 85%;
+  background-color: #ffffff;
+  border-radius: 20px 20px 0px 20px;
+  padding: 10px 15px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+<<<<<<< HEAD
+.chat-text {
+  font-size: 14px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  width: 100%;
+=======
+/* 기본 채팅 박스 (왼쪽 정렬) */
+.chat-box {
+  align-self: flex-start;
+  max-width: 85%;
+  padding: 10px 15px;
+>>>>>>> develop
+}
+
+/* 텍스트 기본 스타일 */
+.chat-text,
+.chat-text2 {
+  font-size: clamp(14px, 4vw, 16px);
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+/* 확장 버튼 */
+.extend-button {
+  display: block;
+  margin: 5px auto 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+/* 공통 메시지 스타일 */
+.friendly-message {
+  margin: 15px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  max-width: 85%;
+  align-self: flex-start;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.red-text {
+  color: #fa400d;
+  font-size: clamp(14px, 4vw, 16px);
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.gray-text {
+  color: gray;
+  font-size: clamp(14px, 4vw, 16px);
+  margin: 5px;
+  line-height: 1.5;
+  padding-left: 15px;
+}
+
+.end-message {
+  border-top: 1px solid #ddd;
+  padding-top: 50px;
+  margin-top: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+<<<<<<< HEAD
+.mike {
+  position: fixed; /* 화면에 고정 */
+  bottom: 20px; /* 화면 하단에서 20px 위로 */
+  left: 50%; /* 화면의 중앙 */
+  transform: translateX(-50%); /* 이미지의 가운데를 정확히 정렬 */
+  width: 80px; /* 마이크 이미지 크기 */
+  height: 80px;
+  cursor: pointer;
+  z-index: 1000; /* 다른 요소보다 위에 표시 */
+}
+
+=======
+/* 고정 요소 */
+.mike,
+.mike-spinner-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.mike {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+.mike-spinner-container {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border: 2px solid #fa400d;
+}
+
+/* 결과 버튼 */
+>>>>>>> develop
+.go-AI-result {
+  width: 350px;
+  height: 70px;
+  border-radius: 10px;
+  background-color: #fa400d;
+  color: #fff;
+  font-size: clamp(14px, 4vw, 16px);
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin: 40px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* 종료 버튼 */
+.end-chat-button {
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 1000;
+  bottom: 20px;
+  left: 50%;
+  background-color: #fa400d;
+  color: white;
+  border-radius: 45px;
+  border: 1px solid white;
+}
+
+/* ------------------------- */
+/* AI 메시지 (카카오톡 스타일) */
+/* ------------------------- */
+
+/* AI 메시지 컨테이너: 프로필 사진과 오른쪽에 이름 및 말풍선 */
+.ai-message-container {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px 0;
+  max-width: 85%;
+}
+
+/* 프로필 사진 */
+.ai-profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+/* AI 메시지 세부 영역: 이름과 말풍선을 별도의 컨테이너에 배치 */
+.ai-message-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* AI 이름: 말풍선 위에 독립적으로 표시 */
+.ai-name {
+  font-size: clamp(14px, 4vw, 16px);
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #202020;
+}
+
+/* 말풍선: 실제 메시지 텍스트만 포함 */
+.ai-speech-bubble {
+  background-color: #f5f5f5;
+  border-radius: 0px 20px 20px 20px;
+  padding: 10px 15px;
+  position: relative;
+  font-size: clamp(14px, 4vw, 16px);
+  line-height: 1.5;
+  word-wrap: break-word;
+  width: 300px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 말풍선 꼬리 */
+.ai-speech-bubble::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #f5f5f5 transparent transparent;
+}
+
+.ai-back-button {
+  position: absolute;
+  left: 15px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.scenario-description {
+  font-weight: bold;
+  font-size: 15px;
+  margin: 20px 10px;
+  line-height: 25px;
+  background-color: #dbdbdb;
+  padding: 15px 20px;
+  border-radius: 12px;
+  color: #202020;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  white-space: pre-wrap;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typing-animation {
+  display: inline-block;
+  overflow: hidden;
+  animation: typing 2s steps(50, end);
+  white-space: nowrap;
+  border-right: 2px solid #fa400d;
+}
+
+.end-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4); /* 배경 반투명 처리 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9000;
+}
+
+.end-popup-content {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  max-width: 400px;
+  width: 80%;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* 그림자 */
+
+  /* 등장 애니메이션 */
+  animation: popupFadeIn 0.3s ease-out;
+}
+
+/* 타이틀 스타일 */
+.end-chat-title {
+  margin: 0 0 1rem 0;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+/* 종료 사유 메시지 스타일 */
+.end-chat-reason {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* 버튼 스타일 */
+.end-chat-button {
+  background-color: #fa400d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.end-chat-button:hover {
+  background-color: #e33603;
+}
+
+/* 팝업 등장시 살짝 확대되며 페이드인 */
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 미디어 쿼리 (화면이 480px 이하일 때) */
+@media screen and (max-width: 480px) {
+  .top-area {
+    padding: 15px 10px; /* 모바일에서 패딩 축소 */
+  }
+
+  .top-title {
+    font-size: clamp(16px, 4vw, 20px);
+    padding-left: 20px;
+  }
+
+  .ai-back-button {
+    left: 5px;
+  }
+
+  .Life {
+    width: 20px;
+    height: 20px;
+  }
+
+  .aichat_line {
+    margin: 100px auto 10px;
+  }
+
+  .chat-area {
+    padding: 0 5px;
+  }
+
+  .top-title {
+    font-size: clamp(20px, 6vw, 24px);
+  }
+
+  .chat-box,
+  .chat-box2,
+  .friendly-message {
+    max-width: 95%;
+  }
+
+  .ai-speech-bubble {
+    max-width: 80%;
+  }
+}
+
+/* 미디어 쿼리 (화면이 320px 이하일 때) */
+@media screen and (max-width: 320px) {
+  .top-title {
+    font-size: clamp(18px, 6vw, 22px);
+  }
+
+  .your-balance {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

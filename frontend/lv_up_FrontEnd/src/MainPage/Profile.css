@@ -1,0 +1,101 @@
+/* 2. 프로필 섹션 */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 3vw, 20px);
+  margin: clamp(10px, 3vw, 20px);
+  width: calc(100% - 40px);
+  max-width: 600px;
+}
+
+/* 프로필 사진을 원형으로 표시 */
+.profile-image {
+  width: clamp(50px, 10vw, 70px);
+  height: clamp(50px, 10vw, 70px);
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* 프로필 정보 영역 */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4px, 1vw, 8px);
+  width: 100%;
+}
+
+/* 이름 영역 */
+.profile-name {
+  font-size: clamp(16px, 3vw, 18px);
+  font-weight: bold;
+}
+
+/* 레벨과 경험치 게이지를 한 줄에 배치 */
+.level-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(4px, 1vw, 8px);
+  width: 100%;
+}
+
+/* 게이지 바 (바탕) */
+.exp-gauge-bar {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  height: clamp(8px, 1.5vw, 10px);
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden; /* 넘치는 부분 방지 */
+}
+
+/* 게이지 바 내부 채워진 부분 */
+.exp-gauge-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #fa400d;
+  border-radius: 5px;
+  transition: width 0.3s ease-in-out; /* 부드러운 애니메이션 */
+}
+
+/* 레벨 표시 영역 */
+.levels {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.now-level,
+.next-level {
+  font-size: clamp(12px, 2vw, 14px);
+  font-weight: bold;
+}
+
+/* 모바일 화면 대응 */
+@media screen and (max-width: 480px) {
+  .profile {
+    margin: 10px;
+    gap: 10px;
+  }
+
+  .level-box {
+    gap: 4px;
+  }
+}
+
+/* 매우 작은 화면 대응 */
+@media screen and (max-width: 320px) {
+  .profile {
+    margin: 8px;
+    gap: 8px;
+  }
+
+  .profile-info {
+    gap: 4px;
+  }
+}

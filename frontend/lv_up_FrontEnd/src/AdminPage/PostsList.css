@@ -1,0 +1,83 @@
+.posts_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.write_button {
+  background-color: #fa400d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.write_button:hover {
+  background-color: #e63900;
+}
+
+.cute_table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: white;
+}
+
+.cute_table th,
+.cute_table td {
+  border: 1px solid #fa400d;
+  padding: 12px;
+  text-align: left;
+}
+
+.cute_table thead {
+  background-color: #FFE6D8;
+}
+
+.cute_table tbody tr:hover {
+  background-color: #FFF2EA;
+}
+
+.post_title {
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.post_title:hover {
+  color: #fa400d;
+  text-decoration: underline;
+}
+
+.edit_button,
+.delete_button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s;
+}
+
+.edit_button {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.edit_button:hover {
+  background-color: #e0e0e0;
+}
+
+.delete_button {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.delete_button:hover {
+  background-color: #ff5252;
+}

@@ -1,0 +1,164 @@
+.main-page {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  min-height: 90vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.gradient-section {
+  background: linear-gradient(to bottom, #ffcdbf, #ffffff);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.profile-section {
+  width: 100%;
+  max-width: 800px;
+}
+
+/* 티켓과 코인 영역 */
+.your-balance {
+  margin-top: clamp(20px, 5vh, 50px);
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.ticket,
+.coin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 45px;
+  padding: 5px 20px; /* 높이는 줄이고 너비는 늘림 */
+  min-width: 100px; /* 최소 너비 설정 */
+}
+
+.balance-section {
+  margin: 0;
+  font-size: clamp(14px, 4vw, 16px);
+  color: white;
+}
+
+.ticket img,
+.coin img {
+  width: clamp(25px, 6vw, 35px); /* 이미지 크기도 약간 줄임 */
+  height: clamp(25px, 6vw, 35px);
+}
+
+/* 공지사항 */
+.announcement {
+  margin: 20px 10px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #ffdad0;
+  min-height: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 토킹 섹션 */
+.talking {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: clamp(40px, 10vw, 90px);
+  margin: 20px auto;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.go-AI-smalltalk,
+.go-smalltalk {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border: 1px solid #dadada;
+  background-color: white;
+  border-radius: 20px;
+  width: clamp(120px, 35vw, 200px);
+  height: clamp(120px, 35vw, 200px);
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.go-AI-smalltalk img,
+.go-smalltalk img {
+  width: clamp(50px, 15vw, 80px);
+  height: clamp(50px, 15vw, 80px);
+}
+
+.go-AI-smalltalk p,
+.go-smalltalk p {
+  font-size: clamp(12px, 3vw, 14px);
+  margin: 0;
+}
+
+/* MainPage.css (또는 전역 CSS에 포함) */
+.loading-overlay {
+  position: fixed; /* 전체 뷰포트를 덮음 */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white; /* 반투명 배경 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* 최상단에 위치시키기 */
+}
+
+.loading-gif {
+  width: 40px;
+  height: 40px; /* 필요에 따라 조절 */
+  margin-bottom: 20px;
+  /* lvup.gif 크기에 맞춰 적절히 조절 */
+}
+
+/* 모바일 화면 */
+@media screen and (max-width: 480px) {
+  .gradient-section {
+    padding: 15px;
+  }
+
+  .your-balance {
+    margin-top: 30px;
+  }
+
+  .talking {
+    gap: 70px;
+  }
+
+  .announcement {
+    margin: 15px 10px;
+    padding: 12px;
+  }
+}
+
+/* 매우 작은 화면 */
+@media screen and (max-width: 320px) {
+  .your-balance {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .talking {
+    gap: 20px;
+    margin-bottom: 70px;
+  }
+}

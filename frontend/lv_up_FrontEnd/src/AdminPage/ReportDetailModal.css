@@ -1,0 +1,117 @@
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal_content {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal_title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fa400d;
+}
+
+.info_row {
+  margin: 10px 0;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.info_label {
+  font-weight: bold;
+  color: #666;
+  margin-right: 10px;
+}
+
+.info_value {
+  color: #333;
+}
+
+.report_types_list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.report_type_item {
+  background: #f5f5f5;
+  padding: 8px 12px;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.penalty_section {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+.date_input_container {
+  margin: 15px 0;
+}
+
+.date_input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.button_container {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+
+.ban_button {
+  background-color: #fa400d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ban_button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.ban_button:hover:not(:disabled) {
+  background-color: #e63900;
+}
+
+.report_close_button {
+  background-color: #666;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.report_close_button:hover {
+  background-color: #555;
+}

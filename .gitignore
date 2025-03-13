@@ -1,0 +1,70 @@
+# backend/lv-up-backend 디렉터리에 있는 HELP.md 무시
+/backend/lv-up-backend/HELP.md
+
+# Gradle
+/backend/lv-up-backend/.gradle
+/backend/lv-up-backend/build/
+!/backend/lv-up-backend/gradle/wrapper/gradle-wrapper.jar
+!/backend/lv-up-backend/**/src/main/**/build/
+!/backend/lv-up-backend/**/src/test/**/build/
+
+### STS(Spring Tool Suite) ###
+/backend/lv-up-backend/.apt_generated
+/backend/lv-up-backend/.classpath
+/backend/lv-up-backend/.factorypath
+/backend/lv-up-backend/.project
+/backend/lv-up-backend/.settings
+/backend/lv-up-backend/.springBeans
+/backend/lv-up-backend/.sts4-cache
+/backend/lv-up-backend/bin/
+!/backend/lv-up-backend/**/src/main/**/bin/
+!/backend/lv-up-backend/**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+/backend/lv-up-backend/.idea
+/backend/lv-up-backend/*.iws
+/backend/lv-up-backend/*.iml
+/backend/lv-up-backend/*.ipr
+/backend/lv-up-backend/out/
+!/backend/lv-up-backend/**/src/main/**/out/
+!/backend/lv-up-backend/**/src/test/**/out/
+
+### NetBeans ###
+/backend/lv-up-backend/nbproject/private/
+/backend/lv-up-backend/nbbuild/
+/backend/lv-up-backend/dist/
+/backend/lv-up-backend/nbdist/
+/backend/lv-up-backend/.nb-gradle/
+
+### VS Code ###
+/backend/lv-up-backend/.vscode/
+
+
+# Logs
+/frontendv_up_FrontEnd/logs
+/frontendv_up_FrontEnd/*.log
+/frontendv_up_FrontEnd/npm-debug.log*
+/frontendv_up_FrontEnd/yarn-debug.log*
+/frontendv_up_FrontEnd/yarn-error.log*
+/frontendv_up_FrontEnd/pnpm-debug.log*
+/frontendv_up_FrontEnd/lerna-debug.log*
+
+/frontendv_up_FrontEnd/node_modules
+/frontendv_up_FrontEnd/dist
+/frontendv_up_FrontEnd/dist-ssr
+/frontendv_up_FrontEnd/*.local
+
+# Editor directories and files
+/frontendv_up_FrontEnd/.vscode/*
+!/frontendv_up_FrontEnd/.vscode/extensions.json
+/frontendv_up_FrontEnd/.idea
+/frontendv_up_FrontEnd/.DS_Store
+/frontendv_up_FrontEnd/*.suo
+/frontendv_up_FrontEnd/*.ntvs*
+/frontendv_up_FrontEnd/*.njsproj
+/frontendv_up_FrontEnd/*.sln
+/frontendv_up_FrontEnd/*.sw?
+
+
+/backend/lv-up-backend/src/main/resources/application-secret.properties
+/backend/lv-up-backend/src/main/resources/apitest.http

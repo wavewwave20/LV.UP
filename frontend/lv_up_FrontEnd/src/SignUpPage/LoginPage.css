@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "DNFBitBitv2";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf")
+    format("opentype");
+}
+
+.login-container {
+  font-family: "DNFBitBitv2", Arial, sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fc7c59;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* PC 환경 (600px 이상) */
+@media screen and (min-width: 600px) {
+  .login-container {
+    width: 600px;
+  }
+}
+
+.small-title {
+  margin-top: 10vh;
+  font-size: clamp(16px, 4vw, 18px);
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+/* 메인 타이틀 그림자 효과 */
+.main-title {
+  position: relative;
+  font-size: clamp(32px, 8vw, 58px);
+  color: white;
+  margin-top: 2vh;
+  margin-bottom: 20vh;
+  letter-spacing: 0.1em;
+  text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+  z-index: 2;
+}
+
+.main-title::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  color: #ff6060;
+  z-index: -1;
+  text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+}
+
+.kakao-login {
+  cursor: pointer;
+  max-width: 100%;
+  height: auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* 모바일 화면 */
+@media screen and (max-width: 599px) {
+  .login-container {
+    width: 100%;
+    min-width: 320px;
+  }
+
+  .small-title {
+    margin-top: 8vh;
+  }
+
+  .main-title {
+    margin-bottom: 15vh;
+  }
+
+  .main-title::after {
+    top: 3px;
+    left: 3px;
+  }
+}
+
+/* 매우 작은 화면 */
+@media screen and (max-width: 320px) {
+  .small-title {
+    margin-top: 5vh;
+  }
+
+  .main-title {
+    margin-bottom: 10vh;
+  }
+
+  .main-title::after {
+    top: 2px;
+    left: 2px;
+  }
+}

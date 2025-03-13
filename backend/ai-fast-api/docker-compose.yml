@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  fastapi-langchain:
+    build:
+      context: ./fastapi-langchain
+    container_name: fastapi-langchain
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY} 
+
+      # Langsmith 
+      - LANGSMITH_TRACING=true
+      - LANGSMITH_ENDPOINT="https://api.smith.langchain.com"
+      - LANGSMITH_PROJECT=${LANGSMITH_PROJECT}
+      - LANGSMITH_API_KEY=${LANGSMITH_API_KEY}
+
+      # spring-backend
+      - WEBHOOK_URL_EXPLANATION=${WEBHOOK_URL_EXPLANATION}
+      - WEBHOOK_URL_HINT=${WEBHOOK_URL_HINT}

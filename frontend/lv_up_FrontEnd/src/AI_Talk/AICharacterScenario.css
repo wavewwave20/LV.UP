@@ -1,0 +1,319 @@
+.aicharacter_container {
+  width: 100%;
+  max-width: 600px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.aicharacter_back_button {
+  position: absolute;
+  top: 33px;
+  left: 12px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.aicharacter_main_title {
+  text-align: center;
+  font-size: clamp(20px, 4vw, 24px);
+  margin-top: 10px;
+  margin-bottom: clamp(30px, 6vh, 60px);
+  color: #202020;
+  padding: 0 40px;
+}
+
+/* 선택된 정보 컨테이너 */
+.aicharacter_selected_info {
+  flex-direction: column;
+  display: flex;
+  align-items: center; /* 가운데 정렬 */
+  gap: 10px; /* 줄 간격 */
+  margin-bottom: 40px;
+}
+
+/* 첫 번째 줄 (나이, 성별) */
+.ai-row-1 {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* 두 번째 줄 (성격) */
+.ai-row-2 {
+  display: flex;
+  justify-content: center;
+}
+
+/* 선택 태그 공통 스타일 */
+.aicharacter_tag {
+  background-color: #fff;
+  border: 2px solid #ffcdbf;
+  border-radius: 16px;
+  width: 130px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 24px rgba(149, 157, 165, 0.2);
+}
+
+.aicharacter_personality {
+  background-color: #fff;
+  border: 2px solid #ffcdbf;
+  border-radius: 16px;
+  width: 300px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 24px rgba(149, 157, 165, 0.2);
+}
+
+/* 글자 스타일 */
+.aicharacter_tag p,
+.aicharacter_personality p {
+  color: #fa400d;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* 시나리오 슬라이더 영역 */
+.aicharacter_scenario_box {
+  box-shadow: 0px 4px 24px rgba(149, 157, 165, 0.2);
+  border-radius: 16px;
+  background-color: #fff;
+  width: 90%;
+  max-width: 519px;
+  min-height: 530px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 120px;
+}
+
+.aicharacter_scenario_slide {
+  min-height: 450px;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aicharacter_scenario_content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  gap: 20px;
+}
+
+.aicharacter_scenario_emoji {
+  font-size: 100px;
+  margin: 20px 0;
+}
+
+.aicharacter_scenario_title {
+  font-size: 16px;
+  color: #202020;
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.aicharacter_scenario_description {
+  font-size: 15px;
+  line-height: 30px;
+  color: #202020;
+  /* padding: 20px; */
+  background-color: #fff;
+  border-radius: 16px;
+  /* box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2); */
+  max-height: 200px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff #ffffff;
+}
+
+/* 스크롤바 스타일링 */
+.aicharacter_scenario_description::-webkit-scrollbar {
+  width: 6px;
+}
+
+.aicharacter_scenario_description::-webkit-scrollbar-track {
+  background: #fff2ef;
+  border-radius: 3px;
+}
+
+.aicharacter_scenario_description::-webkit-scrollbar-thumb {
+  background: #fa400d;
+  border-radius: 3px;
+}
+
+/* Slick 슬라이더 커스텀 스타일 */
+.slick-dots {
+  bottom: -30px;
+}
+
+.slick-dots li button:before {
+  color: #fa400d;
+  opacity: 0.25;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #fa400d;
+  opacity: 1;
+}
+
+.slick-prev,
+.slick-next {
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+.slick-prev {
+  left: -0px;
+}
+
+.slick-next {
+  right: 0px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 20px;
+  color: #ffcdbf;
+  opacity: 0.8;
+}
+
+/* 화살표 호버 효과 */
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  opacity: 1;
+}
+
+/* 시작하기 버튼 */
+.aicharacter_start_button {
+  position: fixed;
+  bottom: clamp(20px, 5vh, 40px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 350px;
+  height: clamp(50px, 10vh, 70px);
+  background-color: #fa400d;
+  border: none;
+  border-radius: 16px;
+  color: #fff;
+  font-size: clamp(16px, 3vw, 20px);
+  cursor: pointer;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.aicharacter_start_button:hover {
+  background-color: #e63900;
+  transform: translate(-50%, -2px);
+  box-shadow: 0px 6px 28px rgba(250, 64, 13, 0.3);
+}
+
+.aicharacter_AIchatStart {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.aicharacter_ticket-count {
+  margin: 0;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+/* 시작하기 버튼 내부 레이아웃 */
+.aicharacter_start_button {
+  position: relative;
+}
+
+.aicharacter_start_button .ticket-container {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+/* 모바일 화면 */
+@media screen and (max-width: 768px) {
+  .aicharacter_main_title {
+    margin-top: 15px;
+  }
+
+  .aicharacter_selected_info {
+    gap: 10px;
+  }
+
+  .aicharacter_tag {
+    width: 120px;
+    height: 50px;
+  }
+
+  .aicharacter_scenario_box {
+    padding: 10px;
+  }
+
+  .aicharacter_scenario_content {
+    padding: 10px;
+  }
+
+  .aicharacter_scenario_description {
+    max-height: 180px;
+    padding: 15px;
+  }
+
+  .slick-prev {
+    left: -10px;
+  }
+  .slick-next {
+    right: -10px;
+  }
+}
+
+/* 작은 모바일 화면 */
+@media screen and (max-width: 360px) {
+  .aicharacter_container {
+    padding: 15px;
+  }
+
+  .aicharacter_tag {
+    width: 100px;
+    height: 45px;
+  }
+
+  .aicharacter_tag p {
+    font-size: 16px;
+  }
+
+  .aicharacter_scenario_box {
+    padding: 10px;
+    min-height: 450px;
+  }
+
+  .aicharacter_scenario_emoji {
+    font-size: 80px;
+    margin: 10px 0;
+  }
+
+  .aicharacter_scenario_description {
+    width: 95%;
+    padding: 12px;
+  }
+}

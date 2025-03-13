@@ -1,0 +1,171 @@
+.feedback_container {
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  min-height: 100vh;
+  text-align: left;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Pretendard Variable";
+  padding: 20px;
+}
+
+.feedback_header {
+  display: flex;
+  align-items: center;
+  margin: 60px 0 20px 0;
+  padding-left: 20px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 18px;
+  color: #666;
+}
+
+.feedback_box {
+  position: relative;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  width: 90%;
+  max-width: 561px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.report_header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.profile_image {
+  margin-right: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile_name {
+  font-size: 25px;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #cacaca;
+  width: 100%;
+}
+
+.check_list {
+  padding: 20px;
+}
+
+.check_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.check_icon {
+  width: 27px;
+  height: 27px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.check_text {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+}
+
+.feedback_message {
+  width: 90%;
+  max-width: 534px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.feedback_text {
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 25px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: #333;
+  padding: 10px;
+}
+
+.confirm_button {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  height: 53px;
+  border-radius: 45px;
+  background-color: #fa400d;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.confirm_button:hover {
+  background-color: #e63900;
+}
+
+/* 빈 피드백 상태를 위한 스타일 */
+.empty_feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  min-height: 60vh;
+}
+
+.empty_feedback_icon {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.empty_feedback h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.empty_feedback p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* 뒤로가기 버튼 스타일 */
+.back_button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.back_button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

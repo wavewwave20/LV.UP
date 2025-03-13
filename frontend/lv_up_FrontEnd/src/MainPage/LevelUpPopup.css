@@ -1,0 +1,178 @@
+@font-face {
+  font-family: "DNFBitBitv2";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf")
+    format("opentype");
+}
+
+.levelup_popup_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.levelup_popup_overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.levelup_popup_content {
+  position: relative;
+  width: 90%; /* 모바일 대응을 위해 %로 변경 */
+  max-width: 414px; /* 최대 너비 설정 */
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
+}
+
+.levelup_popup_star {
+  width: 88px;
+  height: 88px;
+  margin-top: 16px;
+  object-fit: cover;
+}
+
+.levelup_title {
+  margin-top: 20px;
+  font-size: 32px;
+  color: #FAAF0D;
+  font-family: "DNFBitBitv2", Arial, sans-serif;
+}
+
+.levelup_reward_container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.levelup_reward_item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.levelup_ticket_icon,
+.levelup_coin_icon {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.level_ellipseDiv {
+  font-family: "DNFBitBitv2", Arial, sans-serif;
+  font-size: 40px;
+  text-align: center;
+  width: 80px;
+  position: relative;
+  box-shadow: 0 8px 24px #959da533;
+  border-radius: 100%;
+  background-color: #faaf0d;
+  height: 80px;
+  color: #fff;
+  margin-top: 20px;
+  padding: 10px;
+  }
+
+.levelup_plus {
+  font-size: 20px;
+  color: #FAAF0D;
+  text-shadow: 1px 0 0 #EA9846, 0 1px 0 #EA9846, -1px 0 0 #EA9846, 0 -1px 0 #EA9846;
+}
+
+.levelup_reward_value {
+  font-size: 20px;
+  color: #FFC345;
+  text-shadow: 1px 0 0 #EA9846, 0 1px 0 #EA9846, -1px 0 0 #EA9846, 0 -1px 0 #EA9846;
+}
+
+.levelup_confirm_button {
+  margin-top: 40px; /* bottom 대신 margin-top 사용 */
+  margin-bottom: 20px; /* 하단 여백 추가 */
+  width: 130px;
+  height: 53px;
+  border-radius: 45px;
+  background-color: #FA400D;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 480px) {
+  .levelup_popup_content {
+    padding: 15px;
+  }
+
+  .levelup_popup_star {
+    width: 70px;
+    height: 70px;
+  }
+
+  .levelup_title {
+    font-size: 28px;
+  }
+
+  .level_ellipseDiv {
+    font-size: 32px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .levelup_reward_container {
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .levelup_ticket_icon,
+  .levelup_coin_icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .levelup_plus,
+  .levelup_reward_value {
+    font-size: 18px;
+  }
+
+  .levelup_confirm_button {
+    width: 120px;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+}
+
+/* 매우 작은 화면 대응 */
+@media screen and (max-width: 320px) {
+  .levelup_popup_content {
+    padding: 10px;
+  }
+
+  .levelup_title {
+    font-size: 24px;
+  }
+
+  .levelup_popup_star {
+    width: 60px;
+    height: 60px;
+  }
+}

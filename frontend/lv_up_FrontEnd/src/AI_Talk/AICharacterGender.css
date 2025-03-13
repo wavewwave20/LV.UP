@@ -1,0 +1,262 @@
+.aicharacter_container {
+  width: 100%;
+  max-width: 600px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* 컨텐츠 영역을 감싸는 새로운 div */
+.aicharacter_content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 버튼 영역 */
+.aicharacter_button_area {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: auto;  /* 컨텐츠 영역과 하단 사이 공간을 자동으로 채움 */
+  display: flex;
+  justify-content: center;
+}
+
+.aicharacter_next_button {
+  width: 90%;
+  max-width: 350px;
+  height: clamp(50px, 10vh, 70px);
+  background-color: #fa400d;
+  border: none;
+  border-radius: 16px;
+  color: #fff;
+  font-size: clamp(16px, 3vw, 20px);
+  cursor: pointer;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.aicharacter_next_button:hover:not(:disabled) {
+  background-color: #e63900;
+  box-shadow: 0px 6px 28px rgba(250, 64, 13, 0.3);
+}
+
+.aicharacter_next_button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* 성별 선택 섹션의 마진 조정 */
+.aicharacter_selection_box.aicharacter_gender_section {
+  margin-bottom: 20px;
+}
+
+.aicharacter_main_title {
+  text-align: center;
+  font-size: clamp(20px, 4vw, 24px);
+  margin-top: 10px;
+  margin-bottom: clamp(30px, 6vh, 60px);
+  color: #202020;
+  padding: 0 40px;
+}
+
+/* 모바일 화면에서만 margin-top 적용 */
+@media screen and (max-width: 768px) {
+  .aicharacter_main_title {
+    margin-top: 15px;
+  }
+}
+
+.aicharacter_selection_box {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 4px 24px rgba(149, 157, 165, 0.2);
+  padding: clamp(15px, 3vw, 20px);
+  margin-bottom: 30px;
+  width: 90%;
+  max-width: 503px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aicharacter_section_title {
+  color: #fa400d;
+  font-size: clamp(18px, 3.5vw, 20px);
+  text-align: center;
+  margin-bottom: clamp(20px, 4vh, 30px);
+}
+
+/* 나이 선택 그리드 */
+.aicharacter_age_grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(30px, 3vw, 40px);
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 30px;
+  margin-top: clamp(20px, 4vh, 40px);
+  justify-content: center;
+}
+
+.aicharacter_age_button {
+  background-color: #fff;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+  width: clamp(65px, 15vw, 75px);  /* 너비 증가 */
+  height: clamp(35px, 8vw, 40px);  /* 높이 증가 */
+  cursor: pointer;
+  font-size: clamp(14px, 3vw, 18px);
+  color: #202020;
+  transition: all 0.3s ease;
+}
+
+.aicharacter_age_button:hover:not(.aicharacter_selected) {
+  background-color: #fff2ef;
+  transform: translateY(-2px);
+  box-shadow: 0px 10px 20px rgba(149, 157, 165, 0.3);
+}
+
+.aicharacter_age_button.aicharacter_selected {
+  background-color: #fa400d;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0px 10px 20px rgba(250, 64, 13, 0.3);
+}
+
+/* 성별 선택 섹션 */
+.aicharacter_gender_options {
+  display: flex;
+  justify-content: center;
+  gap: clamp(40px, 8vw, 90px);
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.aicharacter_gender_option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.aicharacter_gender_icon_wrapper {
+  width: clamp(100px, 25vw, 149.2px);
+  height: clamp(100px, 25vw, 149.2px);
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: clamp(15px, 3vh, 20px);
+  transition: all 0.3s ease;
+}
+
+.aicharacter_gender_option:hover:not(.aicharacter_selected) .aicharacter_gender_icon_wrapper {
+  background-color: #fff2ef;
+  transform: translateY(-2px);
+  box-shadow: 0px 10px 20px rgba(149, 157, 165, 0.3);
+}
+
+.aicharacter_gender_icon {
+  width: clamp(50px, 15vw, 80px);
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.aicharacter_gender_text {
+  font-size: clamp(16px, 3vw, 18px);
+  color: #202020;
+  transition: all 0.3s ease;
+}
+
+.aicharacter_gender_option.aicharacter_selected .aicharacter_gender_icon_wrapper {
+  background-color: #fa400d;
+  transform: translateY(-2px);
+  box-shadow: 0px 10px 20px rgba(250, 64, 13, 0.3);
+}
+
+.aicharacter_gender_option.aicharacter_selected .aicharacter_gender_icon {
+  filter: brightness(0) invert(1);
+}
+
+.aicharacter_gender_option.aicharacter_selected .aicharacter_gender_text {
+  color: #fa400d;
+  font-weight: bold;
+}
+
+/* 다음 버튼 */
+.aicharacter_next_button {
+  position: absolute;
+  bottom: clamp(20px, 5vh, 40px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 350px;
+  height: clamp(50px, 10vh, 70px);
+  background-color: #fa400d;
+  border: none;
+  border-radius: 16px;
+  color: #fff;
+  font-size: clamp(16px, 3vw, 20px);
+  cursor: pointer;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.aicharacter_next_button:hover:not(:disabled) {
+  background-color: #e63900;
+  transform: translate(-50%, -2px);
+  box-shadow: 0px 6px 28px rgba(250, 64, 13, 0.3);
+}
+
+.aicharacter_next_button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* 작은 모바일 화면 */
+@media screen and (max-width: 360px) {
+  .aicharacter_selection_box {
+    padding: 10px;
+  }
+
+  .aicharacter_age_grid {
+    gap: 10px;
+  }
+
+  .aicharacter_gender_options {
+    gap: 20px;
+  }
+
+  .aicharacter_gender_icon_wrapper {
+    width: 90px;
+    height: 90px;
+  }
+
+  .aicharacter_gender_icon {
+    width: 40px;
+  }
+}
+
+/* 태블릿 */
+@media screen and (min-width: 768px) {
+  .aicharacter_container {
+    padding: 30px;
+  }
+
+  .aicharacter_selection_box {
+    padding: 25px;
+  }
+
+  .aicharacter_age_grid {
+    gap: 15px;
+  }
+}
